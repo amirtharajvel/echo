@@ -12,6 +12,7 @@ const styles = {
   header: {
     padding: '0.3%',
     paddingLeft: '10%',
+    borderBottom: '1px solid #DCDFE4',
   },
 }
 

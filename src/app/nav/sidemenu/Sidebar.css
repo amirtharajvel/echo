@@ -16,7 +16,7 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
-  border-right: 1px solid gray;
+  border-right: 1px solid #DCDFE4;
 }
 .sidebar.open{
   width: 250px;
@@ -79,7 +79,7 @@
   top: -20px;
   left: calc(100% + 15px);
   z-index: 3;
-  background: gray;
+  background: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   padding: 6px 12px;
   border-radius: 4px;
@@ -89,6 +89,7 @@
   white-space: nowrap;
   pointer-events: none;
   transition: 0s;
+  border: 1px solid rgb(68, 84, 111);
 }
 .sidebar li:hover .tooltip{
   opacity: 1;
@@ -103,7 +104,7 @@
 
 .sidebar input{
   font-size: 15px;
-  color: black;
+  color: rgb(68, 84, 111);
   font-weight: 400;
   outline: none;
   height: 50px;
@@ -125,16 +126,21 @@
   transform: translateY(-50%);
   font-size: 22px;
   background: #E9F2FF;
-  color: black;
+  color: rgb(68, 84, 111);
 }
 .sidebar.open .bx-search:hover{
   background: #E9F2FF;
-  color: black;
+  color: rgb(68, 84, 111);
 }
 .sidebar .bx-search:hover{
   background: #E9F2FF;
-  color: darkblue
+  color: #0C66E4;
 }
+
+input {
+  caret-color: #0C66E4; /* Changes the text cursor (caret) color */
+}
+
 .sidebar li a{
   display: flex;
   height: 100%;
@@ -202,7 +208,7 @@
 .sidebar li.profile .job{
   font-size: 15px;
   font-weight: 400;
-  color: black;
+  color: rgb(68, 84, 111);
   white-space: nowrap;
 }
 .sidebar li.profile .job{
@@ -240,7 +246,7 @@
 }
 .home-section .text{
   display: inline-block;
-  color: black;
+  color: rgb(68, 84, 111);
   font-size: 25px;
   font-weight: 500;
   margin: 18px
@@ -258,4 +264,9 @@
 
 .entry:hover {
   color: #0C66E4 !important ;
+}
+
+input::placeholder {
+  color: gray; /* Change to your desired color */
+  opacity: 1; /* Opacity of the placeholder text (1 is fully opaque) */
 }

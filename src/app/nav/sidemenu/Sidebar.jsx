@@ -31,9 +31,16 @@ function Sidebar() {
         <li>
           <a href='#'>
             <i className='bx bx-grid-alt'></i>
-            <span className='links_name'>Dashboard</span>
+            <span className='links_name'>Board</span>
           </a>
-          <span className='tooltip'>Dashboard</span>
+          <span className='tooltip'>Board</span>
+        </li>
+        <li>
+          <a href='#'>
+            <i className='bx bx-folder'></i>
+            <span className='links_name'>Backlog</span>
+          </a>
+          <span className='tooltip'>Backlog</span>
         </li>
         <li>
           <a href='#'>
@@ -55,13 +62,6 @@ function Sidebar() {
             <span className='links_name'>Analytics</span>
           </a>
           <span className='tooltip'>Analytics</span>
-        </li>
-        <li>
-          <a href='#'>
-            <i className='bx bx-folder'></i>
-            <span className='links_name'>File Manager</span>
-          </a>
-          <span className='tooltip'>Files</span>
         </li>
         <li>
           <a href='#'>
