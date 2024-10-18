@@ -13,6 +13,7 @@ const styles = {
   body: {
     marginLeft: '200px',
     padding: '20px',
+    minHeight: '90vh',
   },
 }
 

@@ -3,17 +3,15 @@ import React from 'react'
 function Header() {
   return (
     <header style={styles.header}>
-      <h1>My React Application</h1>
+      <h2>My React Application</h2>
     </header>
   )
 }
 
 const styles = {
   header: {
-    backgroundColor: '#4CAF50',
     padding: '0.3%',
-    textAlign: 'center',
-    color: 'white',
+    paddingLeft: '10%',
   },
 }
 

@@ -13,9 +13,13 @@ function Sidebar() {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className='logo-details'>
-        <i className='bx bxl-c-plus-plus icon'></i>
-        <div className='logo_name'>CodingLab</div>
-        <i className={`bx ${menuIcon}`} id='btn' onClick={toggleSidebar}></i>
+        <i className='bx bx-cog icon' style={{ color: '#357DE8' }}></i>
+        <div className='logo_name'>Echo</div>
+        <i
+          className={`bx ${menuIcon} entry`}
+          id='btn'
+          onClick={toggleSidebar}
+        ></i>
       </div>
 
       <ul className='nav-list'>
@@ -83,9 +87,9 @@ function Sidebar() {
 
         <li className='profile'>
           <div className='profile-details'>
-            <img src='profile.jpg' alt='profileImg' />
+            <i className='bx bx-user'></i>
             <div className='name_job'>
-              <div className='name'>Prem Shahi</div>
+              <div className='name'>Sai</div>
               <div className='job'>Web designer</div>
             </div>
           </div>
