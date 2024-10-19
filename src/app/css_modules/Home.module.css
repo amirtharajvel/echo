@@ -1,0 +1,18 @@
+.card_body {
+  font-size: 12px;
+}
+
+.p-card {
+  padding: 1%;
+}
+
+a .p-card .p-card-title {
+}
+
+.p-card .p-card-title {
+  font-size: 12px;
+  font-weight: 400 !important;
+}
+.p-card .p-card-content {
+  font-size: 12px;
+}

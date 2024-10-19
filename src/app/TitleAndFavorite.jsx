@@ -54,7 +54,7 @@ const TitleAndFavorite = () => {
               onKeyDown={handleKeyDown} // Handle Enter key
               className={styles.textarea} // Add styles for textarea
               rows={1} // Set the number of rows for height
-              cols={200} // Set the number of columns for width
+              // Set the number of columns for width
             />
           ) : (
             <label className={styles.title}>{title}</label>

@@ -29,14 +29,21 @@ function Sidebar() {
           <span className='tooltip'>Search</span>
         </li>
         <li>
-          <a href='#'>
+          <a href='/home'>
+            <i className='bx bx-home'></i>
+            <span className='links_name'>Home</span>
+          </a>
+          <span className='tooltip'>Home</span>
+        </li>
+        <li>
+          <a href='/board'>
             <i className='bx bx-grid-alt'></i>
             <span className='links_name'>Board</span>
           </a>
           <span className='tooltip'>Board</span>
         </li>
         <li>
-          <a href='#'>
+          <a href='/backlog'>
             <i className='bx bx-folder'></i>
             <span className='links_name'>Backlog</span>
           </a>
@@ -63,13 +70,7 @@ function Sidebar() {
           </a>
           <span className='tooltip'>Analytics</span>
         </li>
-        <li>
-          <a href='#'>
-            <i className='bx bx-cart-alt'></i>
-            <span className='links_name'>Order</span>
-          </a>
-          <span className='tooltip'>Order</span>
-        </li>
+
         <li>
           <a href='#'>
             <i className='bx bx-heart'></i>

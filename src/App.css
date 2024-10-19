@@ -1,10 +1,23 @@
 .p-breadcrumb .p-menuitem-link {
   color: rgb(68, 84, 111) !important;
+  border: none !important;
 }
-
 .board_title {
 }
 
 .fullscreen-enabled {
   background: #fff;
+}
+
+.p-breadcrumb {
+  border: 0px solid #000;
+}
+
+.p-card .p-card-title {
+  font-size: 1rem;
+  padding: 5%;
+}
+
+a {
+  text-decoration: none !important;
 }

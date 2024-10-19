@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBreadCrumb } from './nav/AppBreadCrumb'
 import TitleAndFavorite from './TitleAndFavorite'
 
-function Body() {
+function Backlog() {
   return (
     <div style={styles.body}>
       <AppBreadCrumb />
@@ -19,4 +19,4 @@ const styles = {
   },
 }
 
-export default Body
+export default Backlog

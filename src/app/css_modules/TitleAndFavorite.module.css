@@ -3,13 +3,14 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center; /* Center vertically */
 }
 
 .box {
   background-color: white;
   border: 1px solid #fff;
-  padding: 0.7%;
-  margin: 1% 1% 1% 0%;
+  /* padding: 0.7%;
+  margin: 1% 1% 1% 0%; */
   width: 18%;
   text-align: left;
 }
