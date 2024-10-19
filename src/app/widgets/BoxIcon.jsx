@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-const BoxIcon = ({ name, onClick, tooltip, isSystemFullScreen }) => {
+const BoxIcon = ({ name, onClick, tooltip, isFullScreen }) => {
   const [showTooltip, setShowTooltip] = useState(false)
 
-  console.log('isSystemFullScreen', isSystemFullScreen)
-  const tooltipPosition = isSystemFullScreen === true ? 'top' : 'bottom'
+  console.log('isFullScreen', isFullScreen)
+  const tooltipPosition = isFullScreen === true ? 'top' : 'bottom'
 
   return (
     <>
@@ -17,7 +17,7 @@ const BoxIcon = ({ name, onClick, tooltip, isSystemFullScreen }) => {
         <box-icon
           style={{ backgroundColor: '#f1f2f4' }}
           color='#44546F'
-          size='md'
+          size='sm'
           name={name}
           onClick={onClick}
         />
@@ -28,7 +28,7 @@ const BoxIcon = ({ name, onClick, tooltip, isSystemFullScreen }) => {
               [tooltipPosition]: '100%', // Position above the icon
               left: '50%', // Center horizontally
               transform: 'translateX(-50%)', // Adjust for centering
-              marginBottom: '10px', // Increase gap between the tooltip and icon
+              marginBottom: '5px', // Increase gap between the tooltip and icon
               backgroundColor: '#44546F',
               color: '#fff',
               padding: '8px', // Adjust padding for a better look

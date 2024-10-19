@@ -8,18 +8,11 @@ import BoxIcon from './widgets/BoxIcon'
 const TitleAndFavorite = () => {
   const handle = useFullScreenHandle()
   const [title, setTitle] = useState('Sai')
-  const [isSystemFullScreen, setisSystemFullScreen] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const textareaRef = useRef(null) // Create a ref for the textarea
 
   const changeTitle = () => {
     setIsEditing(true)
-  }
-
-  const toggleFullScreen = () => {
-    console.log('full', isSystemFullScreen)
-    setisSystemFullScreen(!isSystemFullScreen)
-    console.log(isSystemFullScreen)
   }
 
   // Function to handle clicks outside the textarea
@@ -50,11 +43,7 @@ const TitleAndFavorite = () => {
 
   return (
     <FullScreen handle={handle}>
-      <div
-        className={`${styles.container} ${
-          isSystemFullScreen ? styles.fullscreen : ''
-        }}`}
-      >
+      <div className={`${styles.container}`}>
         <div className={styles.box} onClick={changeTitle}>
           {isEditing ? (
             <textarea
@@ -80,21 +69,21 @@ const TitleAndFavorite = () => {
               tooltip='Enter full screen'
               name='fullscreen'
               onClick={handle.enter}
-              isSystemFullScreen={handle.active}
+              isFullScreen={handle.active}
             />
           ) : (
             <BoxIcon
               name='exit-fullscreen'
               tooltip='Exit full screen'
               onClick={handle.exit}
-              isSystemFullScreen={handle.active}
+              isFullScreen={handle.active}
             />
           )}
           &nbsp;
           <BoxIcon
             name='dots-horizontal-rounded'
             tooltip='Settings'
-            isSystemFullScreen={handle.active}
+            isFullScreen={handle.active}
           />
         </div>
       </div>
