@@ -80,21 +80,21 @@ const TitleAndFavorite = () => {
               tooltip='Enter full screen'
               name='fullscreen'
               onClick={handle.enter}
-              isSystemFullScreen
+              isSystemFullScreen={handle.active}
             />
           ) : (
             <BoxIcon
               name='exit-fullscreen'
               tooltip='Exit full screen'
               onClick={handle.exit}
-              isSystemFullScreen
+              isSystemFullScreen={handle.active}
             />
           )}
           &nbsp;
           <BoxIcon
             name='dots-horizontal-rounded'
             tooltip='Settings'
-            isSystemFullScreen
+            isSystemFullScreen={handle.active}
           />
         </div>
       </div>
