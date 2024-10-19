@@ -1,7 +1,10 @@
 .p-breadcrumb .p-menuitem-link {
-    color: rgb(68, 84, 111) !important;
+  color: rgb(68, 84, 111) !important;
 }
 
 .board_title {
+}
 
+.fullscreen-enabled {
+  background: #fff;
 }

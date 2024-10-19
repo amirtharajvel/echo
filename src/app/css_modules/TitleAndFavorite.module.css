@@ -1,23 +1,23 @@
 /* TitleAndFavorite.module.css */
 .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
-  .box {
-    background-color: white;
-    border: 1px solid #FFF;
-    padding: 0.7%;
-    margin: 1% 1% 1% 0%;
-    width: 18%;
-    text-align: left;
-  }
-  
-  /* TitleAndFavorite.module.css */
+.box {
+  background-color: white;
+  border: 1px solid #fff;
+  padding: 0.7%;
+  margin: 1% 1% 1% 0%;
+  width: 18%;
+  text-align: left;
+}
+
+/* TitleAndFavorite.module.css */
 .textarea {
   background-color: white;
-  border: 2px solid #0C66E4;
+  border: 2px solid #0c66e4;
   padding: 0.5%;
   width: 100%;
   height: auto; /* Make it responsive to the content */
@@ -29,12 +29,12 @@
 
 .title {
   font-size: 24px;
-  color: #172B4D;
+  color: #172b4d;
   padding: 4% 4% 4% 2%;
 }
 
 .title:hover {
-  background-color: #F1F2F4;
+  background-color: #f1f2f4;
   padding: 2% 2% 2% 2%;
 }
 
