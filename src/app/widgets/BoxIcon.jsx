@@ -1,34 +1,47 @@
-import React from 'react'
-import { Tooltip } from 'primereact/tooltip'
+import React, { useState } from 'react'
 
-const BoxIcon = ({ name, onClick }) => {
+const BoxIcon = ({ name, onClick, tooltip, isSystemFullScreen }) => {
+  const [showTooltip, setShowTooltip] = useState(false)
+
+  const tooltipPosition = isSystemFullScreen ? 'top' : 'bottom'
+
   return (
     <>
-      {/* Tooltip attached to the span wrapper */}
-      <Tooltip target={`.box-icon-${name}`} />
-
       <span
         className={`box-icon-${name}`}
-        data-pr-tooltip='No notifications'
-        data-pr-position='top' // Set position to top
-        data-pr-at='center bottom+15' // Center the tooltip below the span with a 15-pixel gap
-        data-pr-my='center top' // Align the tooltip's center to the top of the span
-        style={{ fontSize: '2rem', cursor: 'pointer' }}
+        style={{ fontSize: '2rem', cursor: 'pointer', position: 'relative' }}
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
       >
         <box-icon
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#e0e0e0' // Change background color
-            e.currentTarget.style.cursor = 'pointer' // Change cursor to pointer (hand)
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#f1f2f4' // Reset background color
-          }}
           style={{ backgroundColor: '#f1f2f4' }}
           color='#44546F'
           size='md'
           name={name}
           onClick={onClick}
         />
+        {showTooltip && (
+          <div
+            style={{
+              position: 'absolute',
+              [tooltipPosition]: '100%', // Position above the icon
+              left: '50%', // Center horizontally
+              transform: 'translateX(-50%)', // Adjust for centering
+              marginBottom: '20px', // Increase gap between the tooltip and icon
+              backgroundColor: '#44546F',
+              color: '#fff',
+              padding: '8px', // Adjust padding for a better look
+              borderRadius: '4px',
+              fontSize: '12px',
+              zIndex: 1000,
+              width: 'auto', // Set width to auto to adjust based on content
+              whiteSpace: 'nowrap', // Prevents text wrapping, keeps it in one line
+              textAlign: 'center', // Center the text
+            }}
+          >
+            {tooltip}
+          </div>
+        )}
       </span>
     </>
   )

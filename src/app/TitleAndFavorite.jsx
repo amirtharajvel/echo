@@ -77,21 +77,24 @@ const TitleAndFavorite = () => {
         <div className={`${styles.box} ${styles.favorite_container}`}>
           {!handle.active ? (
             <BoxIcon
-              tooltip='Enter your username'
+              tooltip='Enter full screen'
               name='fullscreen'
               onClick={handle.enter}
+              isSystemFullScreen
             />
           ) : (
             <BoxIcon
               name='exit-fullscreen'
-              tooltip='Enter your username'
+              tooltip='Exit full screen'
               onClick={handle.exit}
+              isSystemFullScreen
             />
           )}
           &nbsp;
           <BoxIcon
             name='dots-horizontal-rounded'
-            tooltip='Enter your username'
+            tooltip='Settings'
+            isSystemFullScreen
           />
         </div>
       </div>
