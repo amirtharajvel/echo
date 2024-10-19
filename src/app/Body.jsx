@@ -1,17 +1,19 @@
 import React from 'react'
+import { AppBreadCrumb } from './nav/AppBreadCrumb'
+import TitleAndFavorite from './TitleAndFavorite'
 
 function Body() {
   return (
     <div style={styles.body}>
-      <h2>Welcome to the Body Section</h2>
-      <p>This is the main content area of the application.</p>
+      <AppBreadCrumb />
+      <TitleAndFavorite />
     </div>
   )
 }
 
 const styles = {
   body: {
-    marginLeft: '200px',
+    marginLeft: '100px',
     padding: '20px',
     minHeight: '90vh',
   },

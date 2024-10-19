@@ -1,0 +1,57 @@
+/* TitleAndFavorite.module.css */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .box {
+    background-color: white;
+    border: 1px solid #FFF;
+    padding: 0.7%;
+    margin: 1% 1% 1% 0%;
+    width: 18%;
+    text-align: left;
+  }
+  
+  /* TitleAndFavorite.module.css */
+.textarea {
+  background-color: white;
+  border: 2px solid #0C66E4;
+  padding: 0.5%;
+  width: 100%;
+  height: auto; /* Make it responsive to the content */
+  border-radius: 4px;
+  resize: none; /* Prevent resizing if you want to keep the dimensions fixed */
+  text-align: left; /* Center text if desired */
+  font-size: 24px;
+}
+
+.title {
+  font-size: 24px;
+  color: #172B4D;
+  padding: 4% 4% 4% 2%;
+}
+
+.title:hover {
+  background-color: #F1F2F4;
+  padding: 2% 2% 2% 2%;
+}
+
+.favorite_container {
+  text-align: right;
+}
+
+/* Full-screen styles */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: red; /* Optional: Change background color */
+  z-index: 9999; /* Ensure it's on top */
+  display: flex;
+  justify-content: space-between;
+  padding: 2%; /* Optional: Adjust padding */
+}
