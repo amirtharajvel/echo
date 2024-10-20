@@ -2,6 +2,7 @@ import React from 'react'
 import { AppBreadCrumb } from './nav/AppBreadCrumb'
 import TitleAndFavorite from './TitleAndFavorite'
 import SplitterWithCards from './SplitterWithCards' // Import the SplitterWithCards component
+import { CustomKanban } from './widgets/CustomKanban'
 
 function Board() {
   return (
@@ -11,7 +12,7 @@ function Board() {
 
       {/* Add the SplitterWithCards component here */}
       <div style={{ marginTop: '20px' }}>
-        <SplitterWithCards />
+        <CustomKanban />
       </div>
     </div>
   )
