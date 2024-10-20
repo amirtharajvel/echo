@@ -3,6 +3,7 @@ import { Splitter, SplitterPanel } from 'primereact/splitter'
 import { Card } from 'primereact/card'
 import { DndProvider, useDrag, useDrop } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import './css_modules/SplitterWithCards.module.css'
 
 const ItemTypes = {
   CARD: 'card',
@@ -21,7 +22,7 @@ const DraggableCard = ({ card, cardIndex, panelIndex, moveCard }) => {
   return (
     <div
       ref={drag}
-      style={{ opacity: isDragging ? 0.5 : 1, marginBottom: '10px' }}
+      className={`draggable-card ${isDragging ? 'dragging' : ''}`}
     >
       <Card title={card.title}>
         <p>{card.content}</p>
@@ -31,16 +32,23 @@ const DraggableCard = ({ card, cardIndex, panelIndex, moveCard }) => {
 }
 
 // Drop Zone Component (SplitterPanel)
-const DroppablePanel = ({ cards, moveCard, panelIndex }) => {
-  const [, drop] = useDrop({
+const DroppablePanel = ({ cards, moveCard, panelIndex, isOver }) => {
+  const [{ canDrop }, drop] = useDrop({
     accept: ItemTypes.CARD,
     drop: (item) => {
       moveCard(item.cardIndex, item.panelIndex, panelIndex) // From one panel to another
     },
+    collect: (monitor) => ({
+      canDrop: monitor.canDrop(),
+      isOver: monitor.isOver(),
+    }),
   })
 
   return (
-    <div ref={drop} style={{ padding: '10px', minHeight: '100px' }}>
+    <div
+      ref={drop}
+      className={`droppable-panel ${isOver ? 'panel-hover' : ''}`}
+    >
       {cards.map((card, cardIndex) => (
         <DraggableCard
           key={cardIndex}
